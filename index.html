@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookFinder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>BookFinder</h1>
+        <p>Search millions of books. Data from Open Library.</p>
+    </header>
+    <main>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search by title or author...">
+            <button id="searchBtn">Search</button>
+        </div>
+        <div class="controls" id="controls" hidden>
+            <input type="text" id="filterInput" placeholder="Filter these results...">
+            <select id="sortSelect">
+                <option value="relevance">Sort: Best match</option>
+                <option value="title-asc">Title A to Z</option>
+                <option value="title-desc">Title Z to A</option>
+                <option value="year-new">Newest first</option>
+                <option value="year-old">Oldest first</option>
+            </select>
+            <label><input type="check-box" id="coverOnly"> Only with covers</label>
+        </div>
+        <p id="status"></p>
+        <div id="results"></div>
+    </main>
+    <footer>
+        <p>Data from <a href="https://openlibrary.org/developers/api" target="_blank">Open Library API</a></p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
