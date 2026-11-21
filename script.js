@@ -39,7 +39,7 @@ function displayBooks(books) {
     card.className = "book-card";
     if (book.cover_i) {
         const img = document.createElement("img");
-        img.src = `https://covers.openLibrary.org/b/id/${book.cover_i}-M.jpg`;
+        img.src = `https://covers.openLibrary.org/b/id/${book.cover_i}-L.jpg`;
         img.alt = `Cover of ${book.title}`;
         card.appendChild(img);
        } else {
@@ -67,7 +67,7 @@ function applyFilters() {
       .filter((b) => !coverOnly.checked || b.cover_i);
     if (sort === "title-asc") books.sort((a, b) => a.title.localeCompare(b.title));
     if (sort === "title-desc") books.sort((a, b) => b.title.localeCompare(a.title));
-    if (sort === "year-new") books.sort((a, b) => year(b, 0) = year(a, 0));
+    if (sort === "year-new") books.sort((a, b) => year(b, 0) - year(a, 0));
     if (sort === "year-old") books.sort((a, b) => year(a, 9999) - year(b, 9999));
     statusEl.textContent = books.length ? `Showing ${books.length} of ${allBooks.length} books.` : "No books match yout filters.";
     displayBooks(books);
