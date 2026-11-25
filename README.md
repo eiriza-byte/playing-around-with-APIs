@@ -7,7 +7,7 @@ BookFinder is a web app for searching books by title or author. It gets its data
 - Load balancer (Lb01): http://35.177.184.138
 - Web01: http://18.170.213.153
 - Web02: http://35.177.196.224
-- Demo video: PASTE_VIDEO_LINK_HERE
+- Demo video: https://youtu.be/Ks8IM1f5m6U
 
 ## Why I built it
 
